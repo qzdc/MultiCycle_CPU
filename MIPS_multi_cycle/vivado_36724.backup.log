@@ -1,0 +1,258 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat May  6 08:36:27 2023
+# Process ID: 36724
+# Current directory: D:/my_project/COS/3/MIPS_multi_cycle
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29252 D:\my_project\COS\3\MIPS_multi_cycle\MIPS_multi_cycle.xpr
+# Log file: D:/my_project/COS/3/MIPS_multi_cycle/vivado.log
+# Journal file: D:/my_project/COS/3/MIPS_multi_cycle\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/software/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 690.449 ; gain = 45.273
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim/memfile.dat'
+INFO: [SIM-utils-43] Exported 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim/memfile_moreinstra.dat'
+INFO: [SIM-utils-43] Exported 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim/memfile.dat'
+INFO: [SIM-utils-43] Exported 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim/memfile_moreinstra.dat'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim'
+"xelab -wto 55ddd6a6b9d2407fb200e6896d4adf2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/software/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 55ddd6a6b9d2407fb200e6896d4adf2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 733.562 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sim_1/imports/xsim/memfile_moreinstra.dat] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sim_1/imports/xsim/memfile_moreinstra.dat
+file delete -force D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sim_1/imports/xsim/memfile_moreinstra.dat
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse D:/my_project/COS/3/memfile_moreinstra.dat
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim/memfile.dat'
+INFO: [SIM-utils-43] Exported 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim/memfile_moreinstra.dat'
+INFO: [SIM-utils-43] Exported 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim/memfile.dat'
+INFO: [SIM-utils-43] Exported 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim/memfile_moreinstra.dat'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim'
+"xelab -wto 55ddd6a6b9d2407fb200e6896d4adf2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/software/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 55ddd6a6b9d2407fb200e6896d4adf2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+success
+$stop called at time : 205 ns : File "D:/my_project/COS/2/MIPS/MIPS.srcs/sim_1/new/testbench.sv" Line 29
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 758.734 ; gain = 1.434
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: mips_top
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1254.984 ; gain = 221.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mips_top' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mips_top.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'memory' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/memory.sv:3]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'memfile_moreinstra.dat'; please make sure the file is added to project and has read permission, ignoring [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/memory.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'memory' (1#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/memory.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'mips' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mips.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'controlunit' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/controlunit.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'maindec' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/maindec.sv:4]
+	Parameter fetch bound to: 4'b0000 
+	Parameter decode bound to: 4'b0001 
+	Parameter memadr bound to: 4'b0010 
+	Parameter memrd bound to: 4'b0011 
+	Parameter memwb bound to: 4'b0100 
+	Parameter memwr bound to: 4'b0101 
+	Parameter rtypeex bound to: 4'b0110 
+	Parameter rtypewb bound to: 4'b0111 
+	Parameter bex bound to: 4'b1000 
+	Parameter addiex bound to: 4'b1001 
+	Parameter iwb bound to: 4'b1010 
+	Parameter jex bound to: 4'b1011 
+	Parameter subiex bound to: 4'b1100 
+	Parameter andiex bound to: 4'b1101 
+	Parameter oriex bound to: 4'b1110 
+	Parameter lw bound to: 6'b100011 
+	Parameter sw bound to: 6'b101011 
+	Parameter rtype bound to: 6'b000000 
+	Parameter beq bound to: 6'b000100 
+	Parameter addi bound to: 6'b001000 
+	Parameter j bound to: 6'b000010 
+	Parameter andi bound to: 6'b001100 
+	Parameter ori bound to: 6'b001101 
+	Parameter slti bound to: 6'b001010 
+	Parameter bne bound to: 6'b000101 
+	Parameter subi bound to: 6'b001001 
+INFO: [Synth 8-6155] done synthesizing module 'maindec' (2#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/maindec.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'aludec' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/aludec.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'aludec' (3#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/aludec.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'controlunit' (4#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/controlunit.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'datapath' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/datapath.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'flopenr' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/flopenr.sv:3]
+	Parameter x bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopenr' (5#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/flopenr.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mux.sv:3]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (6#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mux.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'mux2__parameterized0' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mux.sv:3]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2__parameterized0' (6#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mux.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/regfile.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (7#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/regfile.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'signextend' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/signextend.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'signextend' (8#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/signextend.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'mux4' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mux.sv:15]
+	Parameter W bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux4' (9#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mux.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/alu.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (10#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/alu.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'datapath' (11#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/datapath.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'mips' (12#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mips.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'mips_top' (13#1) [D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sources_1/new/mips_top.sv:4]
+WARNING: [Synth 8-3331] design memory has unconnected port a[31]
+WARNING: [Synth 8-3331] design memory has unconnected port a[30]
+WARNING: [Synth 8-3331] design memory has unconnected port a[29]
+WARNING: [Synth 8-3331] design memory has unconnected port a[28]
+WARNING: [Synth 8-3331] design memory has unconnected port a[27]
+WARNING: [Synth 8-3331] design memory has unconnected port a[26]
+WARNING: [Synth 8-3331] design memory has unconnected port a[25]
+WARNING: [Synth 8-3331] design memory has unconnected port a[24]
+WARNING: [Synth 8-3331] design memory has unconnected port a[23]
+WARNING: [Synth 8-3331] design memory has unconnected port a[22]
+WARNING: [Synth 8-3331] design memory has unconnected port a[21]
+WARNING: [Synth 8-3331] design memory has unconnected port a[20]
+WARNING: [Synth 8-3331] design memory has unconnected port a[19]
+WARNING: [Synth 8-3331] design memory has unconnected port a[18]
+WARNING: [Synth 8-3331] design memory has unconnected port a[17]
+WARNING: [Synth 8-3331] design memory has unconnected port a[16]
+WARNING: [Synth 8-3331] design memory has unconnected port a[15]
+WARNING: [Synth 8-3331] design memory has unconnected port a[14]
+WARNING: [Synth 8-3331] design memory has unconnected port a[13]
+WARNING: [Synth 8-3331] design memory has unconnected port a[12]
+WARNING: [Synth 8-3331] design memory has unconnected port a[11]
+WARNING: [Synth 8-3331] design memory has unconnected port a[10]
+WARNING: [Synth 8-3331] design memory has unconnected port a[9]
+WARNING: [Synth 8-3331] design memory has unconnected port a[8]
+WARNING: [Synth 8-3331] design memory has unconnected port a[1]
+WARNING: [Synth 8-3331] design memory has unconnected port a[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1328.684 ; gain = 294.938
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1328.684 ; gain = 294.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1328.684 ; gain = 294.938
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1328.684 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1418.266 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1478.121 ; gain = 444.375
+32 Infos, 26 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1478.121 ; gain = 715.406
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May  6 09:38:41 2023...

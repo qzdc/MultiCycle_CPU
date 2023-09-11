@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat May  6 08:36:27 2023
+# Process ID: 36724
+# Current directory: D:/my_project/COS/3/MIPS_multi_cycle
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29252 D:\my_project\COS\3\MIPS_multi_cycle\MIPS_multi_cycle.xpr
+# Log file: D:/my_project/COS/3/MIPS_multi_cycle/vivado.log
+# Journal file: D:/my_project/COS/3/MIPS_multi_cycle\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench.tcl
+export_ip_user_files -of_objects  [get_files D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sim_1/imports/xsim/memfile_moreinstra.dat] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sim_1/imports/xsim/memfile_moreinstra.dat
+file delete -force D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.srcs/sim_1/imports/xsim/memfile_moreinstra.dat
+close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse D:/my_project/COS/3/memfile_moreinstra.dat
+launch_simulation
+source testbench.tcl
+close_sim
+synth_design -rtl -name rtl_1

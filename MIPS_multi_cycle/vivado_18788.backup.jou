@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat May  6 08:01:47 2023
+# Process ID: 18788
+# Current directory: D:/my_project/COS/3/MIPS_multi_cycle
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25724 D:\my_project\COS\3\MIPS_multi_cycle\MIPS_multi_cycle.xpr
+# Log file: D:/my_project/COS/3/MIPS_multi_cycle/vivado.log
+# Journal file: D:/my_project/COS/3/MIPS_multi_cycle\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/my_project/COS/3/MIPS_multi_cycle/MIPS_multi_cycle.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse D:/my_project/COS/2/MIPS/MIPS.sim/sim_1/behav/xsim/memfile_moreinstra.dat
+close_sim
+launch_simulation
+source testbench.tcl
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source testbench.tcl
+current_wave_config {Untitled 3}
+add_wave {{/testbench/M/MIPS/DataPath}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 4}
+add_wave {{/testbench/M/Memory}} 
+relaunch_sim
+close_sim
